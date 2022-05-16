@@ -1,7 +1,8 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.5",
   "name": "rollup-plugin-tinyimg",
-  "main": "./src/index.js",
+  "main": "dist/index.commonjs.js",
+  "module": "dist/index.module.js",
   "dependencies": {
     "chalk": "4.1.2",
     "fs-extra": "^10.1.0",
@@ -11,6 +12,7 @@
     "rollup": "^2.73.0"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.js"
+    "test": "rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.build.js"
   }
 }

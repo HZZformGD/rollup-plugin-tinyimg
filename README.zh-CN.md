@@ -58,7 +58,7 @@ Type: `String`
 压缩后的输出目录 :
 
 ```js
-copy({
+tinyimg({
   output: resolve(__dirname, "dist"),
 });
 ```
@@ -70,7 +70,7 @@ Type: `String`
 压缩后的输出目录 :
 
 ```js
-copy({
+tinyimg({
   output: resolve(__dirname, "dist"),
 });
 ```
@@ -81,6 +81,17 @@ Type: `Regx`| default `/\.(jpe?g|png|webp)$/`
 
 匹配需要被压缩的图片的后缀名
 
+```js
+tinyimg({
+    ...,
+  imageRegx: /\.(jpe?g|png|webp)$/,
+});
+```
+
 ## License
 
 MIT
+
+```
+
+```

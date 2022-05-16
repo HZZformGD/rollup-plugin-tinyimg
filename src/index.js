@@ -6,10 +6,10 @@ import Ora from "ora";
 import { URL } from "url";
 import Chalk from "chalk";
 
-const header = fakerHeader();
 const IMG_REGEXP = /\.(jpe?g|png|webp)$/;
 
 const uploadImage = (file) => {
+  const header = fakerHeader();
   return new Promise((resolve, reject) => {
     const req = https.request(header, (res) =>
       res.on("data", (data) => {
@@ -43,7 +43,7 @@ const compress = async (fileInfo, input, output) => {
     const dpath = path.join(output, fileInfo.path);
     const res = await uploadImage(file);
     const data = await downLoad(res.output.url);
-    console.info(`
+    console.log(`
 originSize: ${Chalk.redBright(res.input.size)}
 compreeSize: ${Chalk.greenBright(res.output.size)}
 ratio: ${Chalk.blueBright(res.output.ratio)}

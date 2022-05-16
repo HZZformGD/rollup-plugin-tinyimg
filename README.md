@@ -62,7 +62,7 @@ Type: `String`
 it's output dir name :
 
 ```js
-copy({
+tinyimg({
   output: resolve(__dirname, "dist"),
 });
 ```
@@ -72,6 +72,13 @@ copy({
 Type: `Regx`| default `/\.(jpe?g|png|webp)$/`
 
 Match the suffix of the image to be compressed
+
+```js
+tinyimg({
+    ...,
+  imageRegx: /\.(jpe?g|png|webp)$/,
+});
+```
 
 ## License
 
