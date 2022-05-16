@@ -1,8 +1,12 @@
 # rollup-plugin-tinyimg
 
-[![Build Status](https://github.com/HZZformGD/rollup-plugin-tinyimg?branch=master)](https://travis-ci.com/vladshcherbin/rollup-plugin-tinyimg)
+[![Build Status](https://github.com/HZZformGD/rollup-plugin-tinyimg?branch=master)](https://github.com/HZZformGD/rollup-plugin-tinyimg)
 
 Using tinypng or tinyjpg to compress your images
+
+<p align="center">
+  🇨🇳 <a href="./README.zh-CN.md">中文版介绍</a>
+</p>
 
 ## Installation
 

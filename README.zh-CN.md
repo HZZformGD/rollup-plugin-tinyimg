@@ -1,6 +1,6 @@
 # rollup-plugin-tinyimg
 
-[![Build Status](https://github.com/HZZformGD/rollup-plugin-tinyimg?branch=master)](https://travis-ci.com/vladshcherbin/rollup-plugin-tinyimg)
+[![Build Status](https://github.com/HZZformGD/rollup-plugin-tinyimg?branch=master)](https://github.com/HZZformGD/rollup-plugin-tinyimg)
 
 通过 tinypng 或者 tinyjpg 来压缩你的图片资源
 
