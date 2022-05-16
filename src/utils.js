@@ -43,8 +43,9 @@ const searchAllImages = (
   input,
   arr = [],
   dir = "/",
-  imageRegx
+  imageRegx = ''
 ) => {
+  
   const files = fs.readdirSync(input);
   for (let i = 0; i < files.length; i++) {
     const info = {};
@@ -53,7 +54,7 @@ const searchAllImages = (
     if (curItem.isDirectory()) {
       searchAllImages(filepath, arr, path.join(dir, files[i], "/"));
     } else {
-      if (IMG_REGEXP.test(filepath)) {
+      if (new RegExp(imageRegx).test(filepath)) {
         info.path = dir + files[i];
         info.file = filepath;
         arr.push(info);

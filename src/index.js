@@ -1,7 +1,7 @@
 import fs from "fs-extra";
 import path, { resolve } from "path";
 import https from "https";
-import { searchAllImages, fakerHeader, randomHead } from "./utils";
+import { searchAllImages, fakerHeader } from "./utils";
 import Ora from "ora";
 import { URL } from "url";
 import Chalk from "chalk";
@@ -58,7 +58,6 @@ ratio: ${Chalk.blueBright(res.output.ratio)}
 
 const tinyImg = (config) => {
   const { input, output, imageRegx = IMG_REGEXP } = config;
-
   return {
     name: "tinyImg",
     async buildEnd() {
