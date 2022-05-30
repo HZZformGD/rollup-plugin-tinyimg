@@ -81,5 +81,4 @@ tinyimg({
 ```
 
 ## License
-
 MIT

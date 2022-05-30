@@ -1,5 +1,5 @@
 {
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "rollup-plugin-tinyimg",
   "main": "dist/index.commonjs.js",
   "module": "dist/index.module.js",
@@ -14,5 +14,10 @@
   "scripts": {
     "test": "rollup -c rollup.config.js",
     "build": "rollup -c rollup.config.build.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HZZformGD/rollup-plugin-tinyimg.git"
+  },
+  "homepage": "https://github.com/HZZformGD/rollup-plugin-tinyimg/blob/master/README.md"
 }
