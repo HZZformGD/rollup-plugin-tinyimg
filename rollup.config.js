@@ -4,8 +4,8 @@ export default {
   input: "src/index.js",
   plugins: [
     tinyImg({
-      input: resolve(__dirname, "public"),
-      output: resolve(__dirname, "demo"),
+      input: resolve(__dirname, "./tests/input"),
+      output: resolve(__dirname, "./tests/output"),
     }),
   ],
   output: {

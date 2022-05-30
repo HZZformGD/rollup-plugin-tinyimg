@@ -39,27 +39,25 @@ function randomHead() {
   return randomUseragent.getRandom();
 }
 
-const searchAllImages = (
-  input,
-  arr = [],
-  dir = "/",
-  imageRegx = ''
-) => {
-  
-  const files = fs.readdirSync(input);
-  for (let i = 0; i < files.length; i++) {
-    const info = {};
-    const filepath = resolve(input, files[i]);
-    const curItem = fs.statSync(filepath);
-    if (curItem.isDirectory()) {
-      searchAllImages(filepath, arr, path.join(dir, files[i], "/"));
-    } else {
-      if (new RegExp(imageRegx).test(filepath)) {
-        info.path = dir + files[i];
-        info.file = filepath;
-        arr.push(info);
+const searchAllImages = (input, arr = [], dir = "/", imageRegx = "") => {
+  try {
+    const files = fs.readdirSync(input);
+    for (let i = 0; i < files.length; i++) {
+      const info = {};
+      const filepath = resolve(input, files[i]);
+      const curItem = fs.statSync(filepath);
+      if (curItem.isDirectory()) {
+        searchAllImages(filepath, arr, path.join(dir, files[i], "/"));
+      } else {
+        if (new RegExp(imageRegx).test(filepath)) {
+          info.path = dir + files[i];
+          info.file = filepath;
+          arr.push(info);
+        }
       }
     }
+  } catch (e) {
+    throw e;
   }
 };
 

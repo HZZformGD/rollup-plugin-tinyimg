@@ -12,12 +12,23 @@
     "rollup": "^2.73.0"
   },
   "scripts": {
-    "test": "rollup -c rollup.config.js",
-    "build": "rollup -c rollup.config.build.js"
+    "test1": "rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.build.js",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]s?$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HZZformGD/rollup-plugin-tinyimg.git"
   },
-  "homepage": "https://github.com/HZZformGD/rollup-plugin-tinyimg/blob/master/README.md"
+  "homepage": "https://github.com/HZZformGD/rollup-plugin-tinyimg/blob/master/README.md",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.12",
+    "@babel/preset-env": "^7.17.12",
+    "babel-jest": "^28.1.0"
+  }
 }
