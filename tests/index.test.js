@@ -2,11 +2,13 @@ import { rollup, watch } from "rollup";
 import tinyImg from "../src/index.js";
 import { resolve } from "path";
 import { searchAllImages } from "../src/utils.js";
+import fs from "fs-extra";
+
 const list = [];
 searchAllImages(resolve(__dirname, "input"), list, "/");
 async function build(pluginOptions) {
   await rollup({
-    input: resolve(__dirname, "input.js"),
+    input: resolve(__dirname, "index.js"),
     output: [
       {
         file: "./output/index.commonjs.js",
@@ -38,16 +40,14 @@ describe("tinyimg test", () => {
     await expect(t).rejects.toThrowError(Error);
   });
 
-  // test("compree success", async () => {
-  //   await build({
-  //     input: resolve(__dirname, "input"),
-  //     output: resolve(__dirname, "output"),
-  //   });
+  test("compree success", async () => {
+    await build({
+      input: resolve(__dirname, "input"),
+      output: resolve(__dirname, "output"),
+    });
 
-  //   for (let i = 0; i < list.length; i++) {
-  //     expect(await fs.pathExists(list[i].path)).toBe(true);
-  //   }
-
-  //   // await expect(t).rejects.toThrowError(Error);
-  // });
+    for (let i = 0; i < list.length; i++) {
+      expect(await fs.pathExists(list[i].file)).toBe(true);
+    }
+  });
 });
