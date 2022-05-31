@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/HZZformGD/rollup-plugin-tinyimg?branch=master)](https://github.com/HZZformGD/rollup-plugin-tinyimg)
 
-Using tinypng or tinyjpg to compress your images
+Using tinypng or tinyjpg to compress your images.(works in vite)
 
 <p align="center">
   🇨🇳 <a href="./README.zh-CN.md">中文版介绍</a>
